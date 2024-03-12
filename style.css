@@ -62,7 +62,7 @@
 
 /* Style for the Hero Section */
 .hero {
-    background: url('intro-1669057161.png') center/cover no-repeat;
+    background-image: url('intro-1669057161.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     text-align: center;
@@ -195,7 +195,7 @@
 
 #client::before{
     content:"";
-    background: url('592653-3840x2160-desktop-4k-coca-cola-background-image.png');
+    background-image: url('592653-3840x2160-desktop-4k-coca-cola-background-image.png');
     position:absolute;
     z-index:-1;
     height: 100%;
@@ -213,7 +213,7 @@
 }
 
 .contact-background {
-    background: url('6899017-fantastic-coca-cola-wallpaper.jpg') no-repeat center center fixed;
+    background-image: url('6899017-fantastic-coca-cola-wallpaper.jpg') no-repeat center center fixed;
     background-size: cover;
     color: white;
     display: flex;
