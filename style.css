@@ -1,0 +1,260 @@
+/* Reset default margin and use a common font */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    background-color: #333; /* Background color for the navigation bar */
+    padding: 10px; /* Padding around the navigation bar */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out the elements horizontally */
+    align-items: center; /* Align items vertically in the center */
+    position: relative; /* Ensure the parent has a position other than static for absolute positioning */
+}
+
+/* Style for the logo image */
+.navbar img {
+    width: 40px; /* Set the width of the logo image */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add margin to separate the logo from links */
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Style for the navigation list */
+.nav-list {
+    list-style: none; /* Remove default list styles */
+    display: flex; /* Use flexbox for layout */
+    padding: 0; /* Remove default padding */
+    margin-left: auto; /* Push the navigation links to the center */
+    margin-right: auto; /* Push the navigation links to the center */
+}
+
+/* Style for each list item in the navigation list */
+.nav-list li {
+    margin-right: 20px; /* Add margin to separate list items */
+}
+
+/* Style for navigation links */
+.nav-list a {
+    text-decoration: none; /* Remove underline from links */
+    color: #fff; /* Set text color to white */
+    font-weight: bold; /* Set font weight to bold */
+    display: inline-block;
+    transition: all 0.6s ease-in;
+}
+
+.nav-list a:hover {
+    color: red;
+    transform: translateY(10px);
+}
+
+/* Style for the Hero Section */
+.hero {
+    background: url('./assets/images/intro-1669057161.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    height:550px;
+
+    position: relative; /* Added position: relative to ensure the images are positioned relative to this container */
+    overflow: hidden; /* Added overflow: hidden to hide overflowing images */
+    animation: slider 12s infinite ease-in-out;
+}
+
+/* Image slider animation */
+@keyframes slider {
+    0% {
+        background-image: url('./assets/images/238041.jpg');
+        background-position: 0% 0%;
+    }
+    25% {
+        background-image: url('./assets/images/592653-3840x2160-desktop-4k-coca-cola-background-image.png');
+        background-position: 100% 0%;
+    }
+    50% {
+        background-image: url('./assets/images/6899017-fantastic-coca-cola-wallpaper.jpg');
+        background-position: 0% 100%;
+    }
+    75% {
+        background-image: url('./assets/images/coca-cola-can-black-background-with-water-drops_674594-14583.jpg');
+        background-position: 100% 100%;
+    }
+    100% {
+        background-image: url('./assets/images/intro-1669057161.png');
+        background-position: 0% 0%;
+    }
+}
+
+.hero div p{
+    color:white;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 1%;
+    padding-bottom: 3%;
+}
+
+.explore-btn {
+    display: inline-block;
+    padding: 1em 2em;
+    margin-top: 20px;
+    text-decoration: none;
+    background-color: #fff;
+    color: #333;
+    border-radius: 5px;
+}
+
+.explore-btn:hover {
+    background-color: red;
+    color: #fff;
+}
+
+/* Services Section Styles */
+
+.services-section {
+    text-align: center; /* Center text within the services section */
+    padding: 20px; /* Set padding for the services section in pixels */
+}
+
+.services-section h2 {
+    margin-bottom: 5px; /* Add bottom margin to the services section heading in pixels */
+}
+
+.service-box {
+    display: inline-block; /* Display as a block-level element */
+    margin: 15px; /* Add margin between service boxes in pixels */
+    text-align: center; /* Center text within the service box */
+    border: 2px solid black; /* Add a black border around the service box */
+    border-radius: 10px; /* Add border-radius for a rounded appearance in pixels */
+    overflow: hidden; /* Hide overflowing content (image) within the service box */
+    width: 400px; /* Add the desired width in pixels */
+    height: 400px; /* Add the desired height in pixels */
+}
+
+.service-box img {
+    width: 400px; /* Make the image fill the entire width of the service box */
+    border-bottom: 2px solid black; /* Add a border at the bottom of the image */
+    height: 60%;
+}
+
+.service-box p {
+    height: auto; /* Allow the height to adjust based on content */
+    display: flex; /* Use flexbox for vertical centering */
+    flex-direction: column; /* Stack the elements vertically */
+    justify-content: center; /* Center the content vertically */
+    padding: 10px; /* Add padding to the text within the service box in pixels */
+    margin: 0; /* Remove default margin from the text */
+}
+
+.service-box:hover{
+    width:500px;
+    height:400px;
+    transition: all 0.5s linear;
+    img{
+        width:500px;
+    }
+}
+
+/* testimonial section */
+#testimonial-container{
+    position: relative;
+    margin:30px;
+}
+
+#testimonial-container h1 {
+    text-align: center; /* Center the text horizontally */
+}
+
+#client{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#client-item{
+    margin: 10px;
+}
+
+#client img{
+    width:100px;
+    padding: 6px;
+    height: auto;
+}
+
+#client::before{
+    content:"";
+    background: url('./assets/images/592653-3840x2160-desktop-4k-coca-cola-background-image.png');
+    position:absolute;
+    z-index:-1;
+    height: 100%;
+    width:100%;
+    top:0;
+    left:0;
+    opacity:0.87;
+}
+
+/* contact us section */
+
+#contactUS {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-background {
+    background: url('./assets/images/6899017-fantastic-coca-cola-wallpaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#contact-box {
+    width: 60%;
+    max-width: 600px;
+    padding: 30px;
+    text-align: left;
+}
+
+#contact-box textarea,
+#contact-box input {
+    width: 100%;
+    border-radius: 12%;
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    margin-bottom: 15px;
+}
+
+#contact-box label {
+    font-size: 1.3rem;
+    text-align: left;
+    margin-bottom: 5px;
+    display: block;
+}
+
+#contact-box button[type="submit"] {
+    background-color: #ff0000; /* Red */
+    color: #000000; /* Black */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact-box button[type="submit"]:hover {
+    background-color: #cc0000; /* Darker Red */
+}
