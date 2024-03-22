@@ -179,30 +179,37 @@
 
 #client{
     display: flex;
-    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap */
     justify-content: center;
+    align-content: center;
 }
 
 #client-item{
-    margin: 10px;
+     margin: 10px;
+    flex: 0 0 calc(20% - 20px); /* Adjust item width for responsiveness */
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
 }
 
 #client img{
-    width:100px;
+    width: 80%;
     padding: 6px;
     height: auto;
+}
+
+#client-item:hover {
+    transform: scale(1.1); /* Increase size on hover */
 }
 
 #client::before{
     content:"";
     background-image: url('592653-3840x2160-desktop-4k-coca-cola-background-image.png');
-    position:absolute;
-    z-index:-1;
+    position: absolute;
+    z-index: -1;
     height: 100%;
-    width:100%;
-    top:0;
-    left:0;
-    opacity:0.87;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.87;
 }
 
 /* contact us section */
@@ -232,15 +239,15 @@
 
 #contact-box textarea,
 #contact-box input {
-    width: 100%;
-    border-radius: 12%;
-    font-size: 1.3rem;
+    width: calc(100% - 20px); /* Adjust width of form elements */
+    border-radius: 12px;
+    font-size: 1rem;
     padding: 0.5rem;
     margin-bottom: 15px;
 }
 
 #contact-box label {
-    font-size: 1.3rem;
+    font-size: 1rem;
     text-align: left;
     margin-bottom: 5px;
     display: block;
@@ -257,4 +264,27 @@
 
 #contact-box button[type="submit"]:hover {
     background-color: #cc0000; /* Darker Red */
+}
+
+/* Media Query for Responsive Design */
+@media only screen and (max-width: 768px) {
+    #client-item {
+        flex-basis: calc(33.33% - 20px); /* Adjust item width for smaller screens */
+    }
+
+    #contact-box {
+        padding: 20px; /* Adjust padding for smaller screens */
+        width: 80%; /* Adjust width of contact box */
+        max-width: 400px; /* Adjust max-width of contact box */
+    }
+
+    #contact-box textarea,
+    #contact-box input {
+        width: calc(100% - 10px); /* Adjust width of form elements */
+        font-size: 0.9rem; /* Decrease font size for smaller screens */
+    }
+
+    #contact-box label {
+        font-size: 0.9rem; /* Decrease font size for smaller screens */
+    }
 }
